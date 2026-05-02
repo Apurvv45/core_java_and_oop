@@ -1,0 +1,21 @@
+
+import java.util.Scanner;
+
+
+public class Area {
+
+    public static double areaa(double a){
+        double areaaa= 3.14*a*a;
+        System.out.println("Area of circle : "+(areaaa));
+        return areaaa;
+    }
+    public static void main(String []args){
+        Scanner sc = new Scanner (System.in);
+        System.out.print("Enter the radius of circle : ");
+        double a = sc.nextDouble();
+        areaa(a);
+
+
+
+    }
+}
