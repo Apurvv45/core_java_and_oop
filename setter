@@ -1,0 +1,37 @@
+
+
+static class Student{
+    private int rno;
+    private String name;
+    private double per;
+
+    public void setRno(int rno) {
+        this.rno = rno;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPer(double per) {
+        this.per = per;
+    }
+
+    public void display(){
+         System.out.println("roll no : "+rno);
+         System.out.println("name : "+name);
+         System.out.println("percentage : "+per);
+     }
+
+
+
+}
+
+public static void main(String[] args){
+    Student s1 = new Student();
+    s1.setRno(101);
+    s1.setName("AAA");
+    s1.setPer(35.00);
+    s1.display();
+
+}
