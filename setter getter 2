@@ -1,0 +1,60 @@
+import static java.lang.Character.getName;
+
+static class Student{
+    private int rno;
+    private String name;
+    private double per;
+
+    public void setRno(int r) {
+        this.rno = r;
+    }
+
+    public void setName(String n) {
+        this.name = n;
+    }
+
+    public void setPer(double p) {
+        this.per = p;
+    }
+
+    public int getRno() {
+        return rno;
+    }
+    public String getName(){
+        return name;
+    }
+
+    public double getPer(){
+        return per;
+    }
+
+
+
+
+}
+
+public static void main(String[] args) throws  IOException {
+    Student s1 = new Student();
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    System.out.println("Enter details : ");
+    System.out.println("Enter Roll no. : ");
+    int r = Integer.parseInt(br.readLine());
+    System.out.println("Enter the name : ");
+    String n = br.readLine();
+    System.out.println("Enter percentage :");
+    double p = Double.parseDouble (br.readLine());
+
+    s1.setRno(r);
+    s1.setName(n);
+    s1.setPer(p);
+
+    System.out.println("The name of the Student is : "+ s1.getName());
+    System.out.println("The percentage of the student is : "+ s1.getPer());
+
+
+
+
+
+
+}
+
