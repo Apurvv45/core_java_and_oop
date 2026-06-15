@@ -38,8 +38,7 @@ public static void main(String[] args){
     s1.setRno(101);
     s1.setName("AAA");
     s1.setPer(35.00);
-    s1.getName();
-    s1.getRno();
+    
     System.out.println(s1.getName());
     System.out.println(s1.getRno());
 
