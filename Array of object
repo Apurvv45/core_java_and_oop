@@ -1,0 +1,46 @@
+import java.sql.SQLOutput;
+
+static class Student{
+
+    private int rno;
+    private String name;
+    private double per;
+
+     public Student(int rno,String name,double per) {
+         this.rno=rno;
+         this.name=name;
+         this.per=per;
+
+     }
+
+     public void display(){
+         System.out.println("Student information...");
+         System.out.println("Roll no is : "+rno);
+         System.out.println("Name is : "+name);
+         System.out.println("percentage is : "+per);
+         System.out.println("----------------------");
+     }
+}
+
+public static void main(String args[]) throws IOException {
+    BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
+    System.out.println("Enter the no of Students : ");
+    int n = Integer.parseInt(br.readLine());
+    Student S [] = new Student[n];
+    for (int i =0; i<n; i++){
+        System.out.println("Enter the roll no :" );
+        int r = Integer.parseInt(br.readLine());
+        System.out.println("Enter the name :");
+        String nm=br.readLine();
+        System.out.println("Enter the percentage : ");
+        double p= Double.parseDouble(br.readLine());
+
+        S[i]=new Student(r,nm,p);
+    }
+
+    for (int i =0; i<n; i++){
+        S[i].display();
+    }
+
+
+}
