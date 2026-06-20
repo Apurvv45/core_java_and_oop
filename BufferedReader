@@ -11,7 +11,7 @@ public class Buffer {
         System.out.println("Enter the Second Integer b : ");
         int b = Integer.parseInt(br.readLine());
 
-        int ans = a+b ;
+        int ans = a+b;
         System.out.println("The Addition is : "+ans);
 
     }
