@@ -40,6 +40,6 @@ public static void main(String[] args){
     s1.setPer(35.00);
     
     System.out.println(s1.getName());
-    System.out.println(s1.getRno());
+    System.out.println(s1.getRno()) ;
 
 }
