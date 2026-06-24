@@ -1,0 +1,39 @@
+package com.tca;
+
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Period;
+import java.time.ZoneId;
+
+
+public class demo1 {
+
+	public static void main(String[] args) {
+		LocalDate ld = LocalDate.now();
+		LocalTime lt = LocalTime.now();
+		LocalDate lm= LocalDate.of(2005, 02, 16);
+		System.out.println(ld);
+		System.out.println(lt);
+		System.out.println(lm);
+		
+		Period p = Period.between(ld, lm);
+		System.out.println(p);
+		System.out.println(p.getYears());
+		System.out.println(p.getMonths());
+		System.out.println(p.getDays());
+		
+		LocalTime lj= LocalTime.of(6, 0);
+		Duration d = Duration.between(lj,lt);
+		System.out.println("hours = "+d.toHours());
+		System.out.println("Seconds will be = "+d.getSeconds());
+		LocalDateTime l = LocalDateTime.now();
+		System.out.println(l);
+		LocalDateTime a = LocalDateTime.now(ZoneId.of("America/Los_Angeles"));
+		System.out.println("current Time in America "+a);
+
+         
+	}
+
+}
