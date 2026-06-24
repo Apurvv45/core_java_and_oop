@@ -1,0 +1,45 @@
+package com.tca;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+class Student{
+	private int rno;
+	public Student(int rno, String name, double per, LocalDate joinDate, LocalDate birthDate, LocalDateTime timestamp) {
+		super();
+		this.rno = rno;
+		this.name = name;
+		this.per = per;
+		this.joinDate = joinDate;
+		this.birthDate = birthDate;
+		this.timestamp = timestamp;
+	}
+	private String name;
+	private double per;
+	private LocalDate joinDate;
+	private LocalDate birthDate;
+	private LocalDateTime timestamp;
+	
+	public void display() {
+		System.out.println("Roll no = "+rno);
+		System.out.println("Name = "+name);
+		System.out.println("Percentage = "+per);
+		System.out.println("joining Date : "+joinDate);
+		System.out.println("Birth Date : "+birthDate);
+		System.out.println("TimeStamp : "+timestamp);
+	}
+}
+public class demo {
+
+	public static void main(String[] args) {
+		LocalDate jd = LocalDate.now();
+		LocalDate bd = LocalDate.of(2005, 10, 10);
+		LocalDateTime ts = LocalDateTime.now();
+		Student s1 = new Student (101,"AAA",90.0,LocalDate.now(),LocalDate.of(2005, 10, 10),LocalDateTime.now());
+		s1.display();
+		
+		
+
+	}
+
+}
