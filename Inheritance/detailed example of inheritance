@@ -1,0 +1,52 @@
+public static class Student{
+    private int rno;
+    private double per;
+    private String name;
+
+   public Student(){
+       rno=101;
+       per=75;
+       name="AAA";
+   }
+
+    public Student(int rno,double per,String name){
+       this.rno=rno;
+       this.per=per;
+       this.name=name;
+    }
+    public void display(){
+        System.out.println("The Roll no :"+rno);
+        System.out.println("The percentage is :"+per);
+        System.out.println("The name of Student is :"+name);
+    }
+
+}
+
+public static class Student2020 extends Student{
+  private String email;
+  private int no;
+
+  public Student2020(){
+      email="AAA@gmail.com";
+      no=969910;
+  }
+  public Student2020(int rno,double per, String name,String email,int no){
+      super(rno,per,name);
+      this.email=email;
+      this.no=no;
+  }
+  public void display(){
+      super.display();
+      System.out.println("The email of Student is :"+email);
+      System.out.println("the contact no is :"+no);
+      System.out.println("--------------------------------");
+  }
+}
+
+public static void main(String[] args){
+   Student2020 ob=new Student2020();
+   ob.display();
+   Student2020 ob1=new Student2020(102,75,"BBB","BBB@gmail.com",221896);
+   ob1.display();
+
+}
