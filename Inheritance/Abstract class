@@ -1,0 +1,33 @@
+package com.tca;
+
+
+abstract class  A{
+	
+	abstract void display();
+	
+}
+
+class B extends A{
+	
+	
+	public void display() {
+		System.out.println("I am in display...");
+		
+	}
+	
+	public void show() {
+		System.out.println("I am in show...");
+	}
+	
+}
+
+public class demo1 {
+
+	public static void main(String[] args) {
+		
+         B ob=new B();
+         ob.display();
+         ob.show();
+	}
+
+}
