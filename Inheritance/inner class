@@ -1,0 +1,26 @@
+package com.tca;
+class A{
+	
+	class B{
+		int j=20;
+		public void display() {
+			System.out.println("I am in class B");
+		}
+		}
+	public void show() {
+		System.out.println("I am in A's show ");
+	}
+	
+}
+
+public class demo1 {
+
+	public static void main(String[] args) {
+		
+        A ob =new A();
+        A.B ob2= ob.new B();
+        ob2.display();
+        ob.show();
+	}
+
+}
