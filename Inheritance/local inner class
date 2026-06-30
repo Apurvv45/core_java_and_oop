@@ -1,0 +1,30 @@
+package com.tca;
+
+class A{
+	
+	
+	public void show() {
+		
+		class B{
+// local inner class is creaated in method of a class...
+			int j=20;
+			public void display() {
+				System.out.println("I am in class B");
+			}
+			}
+		System.out.println("I am in A's show ");
+		B ob2 =new B();//object of that class is created in that method where the class is declared..
+		ob2.display();
+	}
+	
+}
+
+public class demo1 {
+
+	public static void main(String[] args) {
+		
+        A ob =new A();
+        ob.show();
+	}
+
+}
