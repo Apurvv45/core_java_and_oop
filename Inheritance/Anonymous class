@@ -4,7 +4,7 @@ package com.tca;
 
 interface notification{
 	
-	void send();
+	void send();// All methods declared in interface are abstract...
 	
 }
 
