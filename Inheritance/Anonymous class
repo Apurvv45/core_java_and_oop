@@ -1,0 +1,32 @@
+package com.tca;
+
+
+
+interface notification{
+	
+	void send();
+	
+}
+
+public class demo1 {
+
+	public static void main(String[] args) {
+		
+         notification email =new notification() {
+        	public void send() {
+        		 System.out.println(" eamil  sent succesfully !!!");
+        	 }
+         
+	};
+	email.send();
+	
+	notification whats = new notification() {
+		public void send() {
+			System.out.println("Msg sent successfully !!!");
+		}
+	};
+	whats.send();
+
+	
+}
+}
