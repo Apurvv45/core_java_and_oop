@@ -1,0 +1,27 @@
+package com.tca;
+
+
+
+class A{
+	//this is example of method overriding...
+	public void display() {
+		System.out.println(" i am in the A's display");
+	}
+	
+}
+
+
+public class demo1 {
+
+	public static void main(String[] args) {
+		A ob=new A();
+		System.out.println(ob.getClass());
+		System.out.println(ob.getClass().getSuperclass());
+		
+		demo1 d=new demo1();
+		System.out.println(d.getClass());
+		System.out.println(d.getClass().getSuperclass());
+	// object class is parent of all class who don,t have parent class...
+	
+      }
+}
