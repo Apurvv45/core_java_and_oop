@@ -23,7 +23,7 @@ class A implements Cloneable {
 		A t=(A)super.clone();//for primitive data type this single line is sufficient...
 		t.a=new int[a.length];
 		t.a[0]=a[0];
-		t.a[1]=a[1];// this done for the array as it non primitive data type..
+		t.a[1]=a[1];// this is done for the array as it non primitive data type..
 		
 		return t;
 	}
