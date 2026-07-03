@@ -1,0 +1,46 @@
+package com.tca;
+
+
+
+class A implements Cloneable {
+	int i;
+	double d;
+	int a[]=new int[2];
+	
+	A(){
+		 i=11;
+		d=3.14;
+		a[0]=99;
+		a[1]=100;
+	}
+	void display() {
+		System.out.println(i);
+		System.out.println(d);
+		System.out.println(a[0]);
+		System.out.println(a[1]);
+	}
+	public A  clone() throws CloneNotSupportedException{
+		A t=(A)super.clone();//for primitive data type this single line is sufficient...
+		t.a=new int[a.length];
+		t.a[0]=a[0];
+		t.a[1]=a[1];// this done for the array as it non primitive data type..
+		
+		return t;
+	}
+}
+	
+
+
+
+
+public class demo1 {
+
+	public static void main(String[] args) throws Exception {
+		A ob1=new A();
+		A ob2=ob1.clone();
+		
+		ob2.display();
+		
+	
+      }
+}
