@@ -1,0 +1,30 @@
+package com.tca;
+
+
+
+class A{
+	//this is example of method overriding...
+	public void display() {
+		System.out.println(" i am in the A's display");
+	}
+	
+}
+class B extends A{
+	
+}
+
+
+public class demo1 {
+
+	public static void main(String[] args) {
+		Class<A> c1= A.class;
+		System.out.println(c1.getSuperclass());
+		
+		Class<B>c2=B.class;
+		System.out.println(c2.getSuperclass());
+		
+		Class <demo1> c3=demo1.class;
+		System.out.println(c3.getSuperclass());
+	
+      }
+}
