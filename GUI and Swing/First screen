@@ -1,14 +1,32 @@
-import javax.swing.JFrame;
+import javax.swing.*;
 
 public class Firstscreen extends JFrame{
+	
+	JLabel l;
+	JTextField tf;
+	JButton b1,b2;
 	
 
 	Firstscreen(){
 		
 		setLayout(null);
 		
+		l=new JLabel("Message :");
+		l.setSize(100,20);
+		l.setLocation(50,30);
+		add(l);
+		
+		
+		tf=new JTextField();
+		tf.setSize();
+		tf.setLocation(70,30);
+		add(tf);
+		
+		
+		
 		setTitle("TCA");
-		setSize(450,300);
+		setSize(450,450);
+		setLocation(100,200);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
