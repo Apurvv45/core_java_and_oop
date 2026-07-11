@@ -1,0 +1,22 @@
+import javax.swing.JFrame;
+
+public class Firstscreen extends JFrame{
+	
+
+	Firstscreen(){
+		
+		setLayout(null);
+		
+		setTitle("TCA");
+		setSize(450,300);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	public static void main(String[] args) {
+		Firstscreen fc=new Firstscreen();
+		
+
+	}
+
+}
