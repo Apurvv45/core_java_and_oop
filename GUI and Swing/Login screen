@@ -64,6 +64,7 @@ public class Loginscreen extends JFrame implements ActionListener{
 						String p=jp.getText();
 						
 						if(u.equals("Apurv")&& p.equals("tca")) {
+							this.dispose();
 							JOptionPane.showMessageDialog(null, "Login Successful...");
 						}
 						else {
@@ -76,9 +77,7 @@ public class Loginscreen extends JFrame implements ActionListener{
 							tf.setText("");
 							jp.setText("");
 							tf.requestFocus();
-						}
-						
-					
+						}	
 		
 	}
 
@@ -87,7 +86,8 @@ public class Loginscreen extends JFrame implements ActionListener{
 		Loginscreen ls=new Loginscreen();
 		
 
-	       }
+	      }
+	
 	
 	}
 
