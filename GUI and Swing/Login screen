@@ -4,6 +4,7 @@ import javax.swing.*;
 
 public class Loginscreen extends JFrame implements ActionListener{
 	
+	
 	JLabel l1,l2;
 	JTextField tf;
 	JPasswordField jp;
@@ -29,17 +30,17 @@ public class Loginscreen extends JFrame implements ActionListener{
 		add(tf);
 		
 		jp=new JPasswordField();
-		setSize(200,30);
-		setLocation(150,80);
+		jp.setSize(200,30);
+		jp.setLocation(150,80);
 		add(jp);
 		
-		j1=new JButton();
+		j1=new JButton("Login");
 		j1.setSize(100,30);
 		j1.setLocation(60,130);
 		j1.addActionListener(this);
 		add(j1);
 		
-		j2=new JButton();
+		j2=new JButton("Clear");
 		j2.setSize(100,30);
 		j2.setLocation(200,130);
 		j2.addActionListener(this);
@@ -48,19 +49,46 @@ public class Loginscreen extends JFrame implements ActionListener{
 		
 		setTitle("Login Screen");
 		setSize(400,300);
-		setVisible(true)a;
+		setVisible(true);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		
 	}
-	public void Actionperformed(ActionEvent ae) {
+		
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String S =e.getActionCommand();
+					
+					if(S.equals("Login")) {
+						String u=tf.getText();
+						String p=jp.getText();
+						
+						if(u.equals("Apurv")&& p.equals("tca")) {
+							JOptionPane.showMessageDialog(null, "Login Successful...");
+						}
+						else {
+							
+							JOptionPane.showMessageDialog(null, "Login Failed...");
+						}
+					}
+						
+						if(S.equals("Clear")) {
+							tf.setText("");
+							jp.setText("");
+							tf.requestFocus();
+						}
+						
+					
 		
 	}
 
 	public static void main(String[] args) {
 		
+		Loginscreen ls=new Loginscreen();
+		
 
+	       }
+	
 	}
 
-}
+
