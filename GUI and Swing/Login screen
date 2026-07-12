@@ -1,0 +1,66 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Loginscreen extends JFrame implements ActionListener{
+	
+	JLabel l1,l2;
+	JTextField tf;
+	JPasswordField jp;
+	JButton j1,j2;
+	
+	
+	Loginscreen(){
+		setLayout(null);
+		
+		l1=new JLabel("Username");
+		l1.setSize(100,30);
+		l1.setLocation(30,30);
+		add(l1);
+		
+		l2=new JLabel("Password");
+		l2.setSize(100,30);
+		l2.setLocation(30,80);
+		add(l2);
+		
+		tf=new JTextField();
+		tf.setSize(200,30);
+		tf.setLocation(150,30);
+		add(tf);
+		
+		jp=new JPasswordField();
+		setSize(200,30);
+		setLocation(150,80);
+		add(jp);
+		
+		j1=new JButton();
+		j1.setSize(100,30);
+		j1.setLocation(60,130);
+		j1.addActionListener(this);
+		add(j1);
+		
+		j2=new JButton();
+		j2.setSize(100,30);
+		j2.setLocation(200,130);
+		j2.addActionListener(this);
+		add(j2);
+		
+		
+		setTitle("Login Screen");
+		setSize(400,300);
+		setVisible(true)a;
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+	}
+	public void Actionperformed(ActionEvent ae) {
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
