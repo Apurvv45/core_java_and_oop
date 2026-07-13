@@ -1,0 +1,47 @@
+import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
+
+public class Combo extends JFrame implements ItemListener{
+	
+	JComboBox cbx;
+	JTextField tf;
+	
+	Combo(){
+		String [] Sub= {"Core java","Adv java","Spring","C++","Python"};
+		setLayout(null);
+		setTitle("Subject Demo");
+		setSize(500,200);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		cbx=new JComboBox(Sub);
+		cbx.setSize(200,30);
+		cbx.setLocation(50,50);
+		cbx.addItemListener(this);
+		add(cbx);
+		
+		
+		tf = new JTextField();
+		tf.setSize(200,30);
+		tf.setLocation(50,120);
+		add(tf);
+		
+	}
+	
+	
+
+	public static void main(String[] args) {
+		Combo c=new Combo();
+
+	}
+
+
+
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		String S=(String) cbx.getSelectedItem();
+		tf.setText(S);
+	}
+
+}
