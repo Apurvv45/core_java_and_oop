@@ -7,6 +7,7 @@ public class Radio extends JFrame implements ActionListener{
 	
 	JRadioButton r1,r2;
 	JTextField tf;
+	ButtonGroup bg;
 	
 	Radio(){
 		setLayout(null);
@@ -30,6 +31,11 @@ public class Radio extends JFrame implements ActionListener{
 		r2.setLocation(30,60);
 		r2.addActionListener(this);
 		add(r2);
+		
+		bg=new ButtonGroup();
+		bg.add(r1);
+		bg.add(r2);
+		
 	}
 	
 	
