@@ -1,0 +1,50 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+
+public class Radio extends JFrame implements ActionListener{
+	
+	JRadioButton r1,r2;
+	JTextField tf;
+	
+	Radio(){
+		setLayout(null);
+		setTitle("RadioButton");
+		setSize(500,200);
+		setVisible(true);
+		
+		tf=new JTextField();
+		tf.setSize(200,30);
+		tf.setLocation(150,60);
+		add(tf);
+		
+		r1=new JRadioButton("FY");
+		r1.setSize(100,30);
+		r1.setLocation(30,30);
+		r1.addActionListener(this);
+		add(r1);
+		
+		r2=new JRadioButton("SY");
+		r2.setSize(100,30);
+		r2.setLocation(30,60);
+		r2.addActionListener(this);
+		add(r2);
+	}
+	
+	
+
+	public static void main(String[] args) {
+		Radio r =new Radio();
+
+	}
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		String S= e.getActionCommand();
+		tf.setText(S);
+	}
+
+}
