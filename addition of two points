@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+class Point {
+    private int x;
+    private int y;
+
+    // Set coordinates
+    public void setPoint(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // Display coordinates
+    public void showPoint() {
+        System.out.println("(" + x + ", " + y + ")");
+    }
+
+    // Add two points
+    public Point addPoint(Point p) {
+        Point result = new Point();
+        result.x = this.x + p.x;
+        result.y = this.y + p.y;
+        return result;
+    }
+}
+
+public class Tester {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Point p1 = new Point();
+        Point p2 = new Point();
+
+        System.out.println("Enter coordinates of Point 1:");
+        System.out.print("x = ");
+        int x1 = sc.nextInt();
+        System.out.print("y = ");
+        int y1 = sc.nextInt();
+        p1.setPoint(x1, y1);
+
+        System.out.println("\nEnter coordinates of Point 2:");
+        System.out.print("x = ");
+        int x2 = sc.nextInt();
+        System.out.print("y = ");
+        int y2 = sc.nextInt();
+        p2.setPoint(x2, y2);
+
+        System.out.print("\nPoint 1 : ");
+        p1.showPoint();
+
+        System.out.print("Point 2 : ");
+        p2.showPoint();
+
+        Point result = p1.addPoint(p2);
+
+        System.out.println("Resultant Point after Addition:");
+        System.out.print("Point : ");
+        result.showPoint();
+
+        sc.close();
+    }
+}
