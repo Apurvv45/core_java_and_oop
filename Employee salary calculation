@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+class MyString {
+    private String str;
+
+    // Parameterized constructor
+    MyString(String str) {
+        this.str = str;
+    }
+
+    // Method to move '#' to the beginning
+    public String stringOperation() {
+        String hash = "";
+        String other = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (ch == '#')
+                hash += ch;
+            else
+                other += ch;
+        }
+
+        return hash + other;
+    }
+}
+
+public class Tester {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        MyString obj = new MyString(s);
+
+        String result = obj.stringOperation();
+
+        System.out.println("Resultant String: " + result);
+
+        sc.close();
+    }
+}
