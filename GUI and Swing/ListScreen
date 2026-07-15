@@ -1,0 +1,48 @@
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.event.*;
+public class Listdemo extends JFrame implements ListSelectionListener{
+	JList lst;
+	JScrollPane jsp;
+	JTextField tf;
+	
+	
+	
+	Listdemo(){
+		setLayout(null);
+		setTitle("LIST");
+		setSize(500,200);
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		String []sub= {"C","C++","Core JAVA","ADvance Java","Python"};
+		lst=new JList(sub);
+		lst.addListSelectionListener(this);
+		lst.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+		
+		jsp=new JScrollPane(lst);
+		jsp.setSize(200,100);
+		jsp.setLocation(50,30);
+		add(jsp);
+		
+		tf=new JTextField();
+		tf.setSize(270,30);
+		tf.setLocation(10,100);
+		
+	}
+
+	public static void main(String[] args) {
+		
+		Listdemo l=new Listdemo();
+
+	}
+
+	@Override
+	public void valueChanged(ListSelectionEvent e) {
+		
+		
+	}
+
+}
