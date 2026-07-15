@@ -1,5 +1,4 @@
-import java.awt.event.*;
-import java.awt.*;
+
 import javax.swing.*;
 import javax.swing.event.*;
 public class Listdemo extends JFrame implements ListSelectionListener{
@@ -12,12 +11,12 @@ public class Listdemo extends JFrame implements ListSelectionListener{
 	Listdemo(){
 		setLayout(null);
 		setTitle("LIST");
-		setSize(500,200);
+		setSize(500,250);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
-		String []sub= {"C","C++","Core JAVA","ADvance Java","Python"};
+		String []sub= {"C","C++","Core JAVA","Advance Java","Python","Spring","Microservices"};
 		lst=new JList(sub);
 		lst.addListSelectionListener(this);
 		lst.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
@@ -29,7 +28,8 @@ public class Listdemo extends JFrame implements ListSelectionListener{
 		
 		tf=new JTextField();
 		tf.setSize(270,30);
-		tf.setLocation(10,100);
+		tf.setLocation(10,150);
+		add(tf);
 		
 	}
 
@@ -41,6 +41,12 @@ public class Listdemo extends JFrame implements ListSelectionListener{
 
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
+		Object si=lst.getSelectedValue();
+		String line="";
+		for (int i=0;i<((String) si).length();i++) {
+			line = line+ (String) si[i] +" ";
+			tf.setText(line);
+		}
 		
 		
 	}
