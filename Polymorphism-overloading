@@ -1,7 +1,7 @@
 package com.tca;
 
 class A{
-	//this is example of method overloading...
+	//this is example of method overloading.
 	public void display() {
 		System.out.println(" i am the real display");
 	}
