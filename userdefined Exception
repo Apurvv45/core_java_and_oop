@@ -1,0 +1,33 @@
+import java.util.*;
+ class InvalidAge extends Exception{
+ InvalidAge(String message){
+		  super(message);
+	}
+}
+
+public class UserException {
+	
+	public static void check(int age) throws InvalidAge {
+		if (age<=0||age>100) {
+			throw new InvalidAge("age must be valid");
+		}
+		else {
+			System.out.println("Valid Age...");
+		}
+	}
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		try {
+		System.out.print("Enter the age : ");
+		int age=sc.nextInt();
+		check( age);
+		}
+		catch(InvalidAge ia) {
+			System.out.println(ia.getMessage());
+		}
+		
+
+	}
+
+}
